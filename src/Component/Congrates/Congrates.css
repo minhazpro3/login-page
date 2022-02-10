@@ -1,0 +1,40 @@
+
+h3{
+    text-align: center;
+}
+.userNameWish{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 0px 0px 50px 0px;
+}
+
+.userNameWish h3{
+    color: green;
+}
+.userNameWish span{
+    color: orange;
+}
+
+.buttons{
+    background-color: seagreen;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+   padding: 5px 10px 5px 10px;
+    cursor: pointer;
+}
+
+.buttons:hover{
+    background-color: green;
+}
+
+.image img{
+    width: 30rem;
+    
+}
+ .image{
+    display: flex;
+    justify-content: center;
+ }
