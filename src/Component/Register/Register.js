@@ -51,6 +51,7 @@ const Register = () => {
 
   return (
     <div className="registerDiv">
+      <h2>Please Register</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="register">
           <input {...register("name")} placeholder="name" type="text" required />

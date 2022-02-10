@@ -32,6 +32,7 @@ const Login = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 <div className="login">
+                <h2>Please Login</h2>
                     <input  {...register("email")} required placeholder="email" type="email" />
 
                     {!error && <small>Something Wrong</small>}
