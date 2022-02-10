@@ -1,11 +1,26 @@
+// const firebaseConfig = {
+
+//   apiKey: "",
+//   authDomain: "",
+//   projectId: "",
+//   storageBucket: "",
+//   messagingSenderId: "",
+//   appId: ""
+
+
+// };
+
+// export default firebaseConfig
+
+
+
 const firebaseConfig = {
-
-  apiKey: "AIzaSyDxPK7vl4FVpJKXjyUIRcrFjvfYFv1GEh4",
-  authDomain: "login-page-1ea24.firebaseapp.com",
-  projectId: "login-page-1ea24",
-  storageBucket: "login-page-1ea24.appspot.com",
-  messagingSenderId: "760378218420",
-  appId: "1:760378218420:web:5b66f1a4891859d50684e1"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
+export default firebaseConfig;
 
-export default firebaseConfig
