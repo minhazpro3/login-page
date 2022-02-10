@@ -1,4 +1,4 @@
-import { BrowserRouter,Routes,Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Congrates from "./Component/Congrates/Congrates";
 import Home from './Component/Home/Home';
@@ -10,22 +10,22 @@ import Register from './Component/Register/Register';
 function App() {
   return (
     <div className="App">
-     
 
-        <useFirebase>
+
+      <useFirebase>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/home" element={<Home/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/register" element={<Register/>}/>
-            <Route path="/congratulation" element={<PrivateRoute> <Congrates/> </PrivateRoute>} />
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/congratulation" element={<PrivateRoute> <Congrates /> </PrivateRoute>} />
           </Routes>
         </BrowserRouter>
-        </useFirebase>
-     
-      
-      
+      </useFirebase>
+
+
+
     </div>
   );
 }

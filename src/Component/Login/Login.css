@@ -1,0 +1,24 @@
+
+.login {
+    text-align: center;
+    margin: 8rem 0 0 0;
+    gap: 5px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+.login input{
+    height: 1.5rem;
+    border: 2px solid rgb(170, 77, 116);
+    border-radius: 5px;
+}
+
+.submit{
+    width: 15.5rem !important ;
+    background-color: rgb(235, 106, 47);
+}
+
+p{
+    text-align: center;
+}

@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged,createUserWithEmailAndPassword,updateProfile ,signInWithEmailAndPassword ,signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import initializeFirebaseApp from "./firebase.init";
 import { useEffect, useState } from "react";
 
@@ -7,49 +7,49 @@ const useFirebase = () => {
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
     const [user, setUser] = useState({})
-    const [error, setError]=useState(true)
+    const [error, setError] = useState(true)
     const [isLoading, setIsLoading] = useState(true)
 
     const googleSignIn = () => {
-      return  signInWithPopup(auth, googleProvider)
-          
+        return signInWithPopup(auth, googleProvider)
+
     }
 
     const createUserEmailPassword = (email, password) => {
-       return createUserWithEmailAndPassword(auth, email, password)
+        return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    const loginEmailAndPassword = (email, password)=>{
+    const loginEmailAndPassword = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     // update name
-    const updateName = (name)=>{
+    const updateName = (name) => {
         console.log(name)
         updateProfile(auth.currentUser, {
             displayName: name
-          }).then(() => {
+        }).then(() => {
             window.location.reload()
-          }).catch((error) => {
-           if(error){
-               setError(false)
-           }
-          });
-          
+        }).catch((error) => {
+            if (error) {
+                setError(false)
+            }
+        });
+
     }
 
     // logOut
-    const logOut = ()=>{
+    const logOut = () => {
         signOut(auth)
-        .then(() => {
+            .then(() => {
 
-          }).catch((error) => {
-           
-          });
+            }).catch((error) => {
+
+            });
     }
 
     // onAuth state catch
-    
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {

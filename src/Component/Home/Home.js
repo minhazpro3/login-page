@@ -5,8 +5,8 @@ const Home = () => {
     return (
         <div>
             <h3>Home JS</h3>
-            <Login/>
-            
+            <Login />
+
         </div>
     );
 };
